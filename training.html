@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Training — MPX</title>
+<meta name="description" content="Personal training and Elite Group Sessions from MPX — weekly group training at Trinity Austin School starting the week of August 24, 2026. Sign up to get started.">
+<link rel="icon" href="/logo.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">MP<span>X</span></a>
+    <nav class="nav-links">
+      <a href="index.html">HOME</a>
+      <a href="shop.html">SHOP</a>
+      <a href="training.html" class="active">TRAINING</a>
+      <a href="about.html">ABOUT</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="padding:90px 32px 60px;">
+  <div class="hero-content">
+    <div class="eyebrow">PERSONAL &amp; GROUP TRAINING</div>
+    <h1 style="font-size:42px;">Real coaching. Real reps. On the field.</h1>
+    <p class="hero-body">One-on-one personal training and Elite Group Sessions for grades 1 through high school — sign up below and we'll take it from there.</p>
+    <div class="btn-row">
+      <a href="#signup" class="btn btn-primary">SIGN UP NOW</a>
+    </div>
+  </div>
+</section>
+
+<!-- PERSONAL TRAINING -->
+<section class="block" style="border-top:none;padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">1-ON-1</div>
+      <h2>Personal Training</h2>
+      <p>Individualized sessions built around your player's game — stick skills, footwork, IQ, and conditioning, coached directly by MPX. Sign up below and pick "Personal Training" to get started; we'll follow up to lock in scheduling and pricing.</p>
+    </div>
+    <div class="btn-row" style="justify-content:flex-start;">
+      <a href="#signup" class="btn btn-primary">SIGN UP FOR PERSONAL TRAINING</a>
+    </div>
+  </div>
+</section>
+
+<!-- ELITE GROUP SESSIONS -->
+<section class="block">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">GROUP TRAINING</div>
+      <h2>Elite Group Sessions</h2>
+      <p>Five age-banded group programs, coached weekly at Trinity Austin School. Sessions begin the week of <strong>August 24, 2026</strong> and run weekly from there. The exact address and map are shared with you automatically once you register below.</p>
+    </div>
+    <div class="group-grid">
+
+      <div class="group-card">
+        <div class="tag">ELITE GROUP</div>
+        <h3>1st–2nd Grade Elite</h3>
+        <p>Foundational stick skills, coordination, and game introduction for our youngest elite group.</p>
+        <div class="meta">
+          <div><span>Location:</span> Trinity Austin School</div>
+          <div><span>Frequency:</span> Weekly, starting week of Aug 24, 2026</div>
+        </div>
+        <a href="#signup" class="btn-view">SIGN UP</a>
+      </div>
+
+      <div class="group-card">
+        <div class="tag">ELITE GROUP</div>
+        <h3>3rd–4th Grade Elite</h3>
+        <p>Building on fundamentals with faster reps, small-sided games, and early stick-IQ development.</p>
+        <div class="meta">
+          <div><span>Location:</span> Trinity Austin School</div>
+          <div><span>Frequency:</span> Weekly, starting week of Aug 24, 2026</div>
+        </div>
+        <a href="#signup" class="btn-view">SIGN UP</a>
+      </div>
+
+      <div class="group-card">
+        <div class="tag">ELITE GROUP</div>
+        <h3>5th–6th Grade Elite</h3>
+        <p>Position-specific work, competitive drills, and conditioning for players stepping up their game.</p>
+        <div class="meta">
+          <div><span>Location:</span> Trinity Austin School</div>
+          <div><span>Frequency:</span> Weekly, starting week of Aug 24, 2026</div>
+        </div>
+        <a href="#signup" class="btn-view">SIGN UP</a>
+      </div>
+
+      <div class="group-card">
+        <div class="tag">ELITE GROUP</div>
+        <h3>7th–8th Grade Elite</h3>
+        <p>High-tempo training focused on advanced stick skills, IQ, and physical development ahead of high school.</p>
+        <div class="meta">
+          <div><span>Location:</span> Trinity Austin School</div>
+          <div><span>Frequency:</span> Weekly, starting week of Aug 24, 2026</div>
+        </div>
+        <a href="#signup" class="btn-view">SIGN UP</a>
+      </div>
+
+      <div class="group-card">
+        <div class="tag">ELITE GROUP</div>
+        <h3>High School Elite</h3>
+        <p>Competitive-level training for high schoolers — advanced skill work, film-informed coaching, and conditioning.</p>
+        <div class="meta">
+          <div><span>Location:</span> Trinity Austin School</div>
+          <div><span>Frequency:</span> Weekly, starting week of Aug 24, 2026</div>
+        </div>
+        <a href="#signup" class="btn-view">SIGN UP</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SIGN UP FORM -->
+<section class="block" id="signup">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">SIGN UP</div>
+      <h2>Register for training</h2>
+      <p>Fill this out for personal training or any Elite Group Session. Once you submit, we'll confirm your spot and — for group sessions — you'll immediately see the Trinity Austin address and map right here on this page.</p>
+    </div>
+
+    <form id="training-form" class="form-card" action="https://formspree.io/f/philippoquie@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="MPX Training Sign-Up">
+      <input type="hidden" name="form_type" value="Training Sign-Up">
+
+      <div class="form-grid2">
+        <div class="form-row">
+          <label for="parent-name">Parent / Player Name</label>
+          <input type="text" id="parent-name" name="Name" required>
+        </div>
+        <div class="form-row">
+          <label for="player-age">Player Grade / Age</label>
+          <input type="text" id="player-age" name="Player Grade or Age" placeholder="e.g. 5th grade">
+        </div>
+      </div>
+
+      <div class="form-grid2">
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="Email" required>
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="Phone" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="program">Program</label>
+        <select id="program" name="Program" required>
+          <option value="" disabled selected>Select a program</option>
+          <option value="Personal Training">Personal Training</option>
+          <option value="1st-2nd Grade Elite Group">1st–2nd Grade Elite Group Session</option>
+          <option value="3rd-4th Grade Elite Group">3rd–4th Grade Elite Group Session</option>
+          <option value="5th-6th Grade Elite Group">5th–6th Grade Elite Group Session</option>
+          <option value="7th-8th Grade Elite Group">7th–8th Grade Elite Group Session</option>
+          <option value="High School Elite Group">High School Elite Group Session</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="message">Anything we should know?</label>
+        <textarea id="message" name="Message" placeholder="Experience level, scheduling notes, questions..."></textarea>
+      </div>
+
+      <div class="form-submit-row">
+        <button type="submit" class="btn btn-primary">SUBMIT REGISTRATION</button>
+      </div>
+      <p class="form-note">We'll reach out by email or phone to confirm details. For group sessions, the Trinity Austin address and map unlock right below once you submit.</p>
+      <p class="form-error" id="form-error">Something went wrong sending that — please try again, or email us directly.</p>
+    </form>
+
+    <div class="confirm-panel" id="confirm-panel">
+      <div class="eyebrow">YOU'RE REGISTERED</div>
+      <h3>Thanks — we've got your info.</h3>
+      <p>We'll follow up by email or phone to confirm scheduling. Here's where Elite Group Sessions are held:</p>
+      <div class="confirm-address">
+        <div class="loc-name">Trinity Austin School</div>
+        <div class="loc-addr">3901 Bee Cave Rd, West Lake Hills, TX 78746</div>
+      </div>
+      <div class="map-embed">
+        <iframe src="https://www.google.com/maps?q=3901+Bee+Cave+Rd,+West+Lake+Hills,+TX+78746&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Trinity Austin School map"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREERS -->
+<section class="block" id="careers">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">JOIN THE TEAM</div>
+      <h2>Careers</h2>
+    </div>
+    <div class="careers-card">
+      <div>
+        <h3>Become a Trainer at MPX</h3>
+        <p>We're always looking for coaches who care about the fundamentals and want to help grow the game. If that's you, reach out — tell us about your background and coaching experience.</p>
+      </div>
+      <a href="mailto:philippoquie@gmail.com?subject=MPX%20Trainer%20Application" class="btn btn-primary">APPLY TO COACH</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">MP<span>X</span></a>
+      <p>A lacrosse brand built on inclusion and the growth of the game — training, gear, and community, one initiative at a time.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="training.html">Training</a>
+        <a href="about.html">About</a>
+        <a href="training.html#careers">Careers</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://instagram.com/mpxtraining" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://tiktok.com/@mpxtraining" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom wrap">© 2026 MPX. All rights reserved.</div>
+</footer>
+
+<script>
+  const form = document.getElementById('training-form');
+  const errorEl = document.getElementById('form-error');
+  const confirmPanel = document.getElementById('confirm-panel');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    errorEl.style.display = 'none';
+    const submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'SUBMITTING...';
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        form.style.display = 'none';
+        confirmPanel.style.display = 'block';
+        confirmPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        throw new Error('Form submission failed');
+      }
+    }).catch(function () {
+      errorEl.style.display = 'block';
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'SUBMIT REGISTRATION';
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request a Film Breakdown — MPX</title>
+<meta name="description" content="Request a personal game film breakdown from an MPX coach — 15 or 30 minute options available.">
+<link rel="icon" href="/logo.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">MP<span>X</span></a>
+    <nav class="nav-links">
+      <a href="index.html">HOME</a>
+      <a href="shop.html" class="active">SHOP</a>
+      <a href="training.html">TRAINING</a>
+      <a href="about.html">ABOUT</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="padding:90px 32px 60px;">
+  <div class="hero-content">
+    <div class="eyebrow">FILM BREAKDOWN</div>
+    <h1 style="font-size:42px;">Request your game film breakdown.</h1>
+    <p class="hero-body">Tell us which breakdown you want and how to reach you — a coach will follow up to collect your film and confirm payment.</p>
+  </div>
+</section>
+
+<section class="block" style="border-top:none;padding-top:0;">
+  <div class="wrap">
+
+    <form id="breakdown-form" class="form-card" action="https://formspree.io/f/philippoquie@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="MPX Film Breakdown Request">
+      <input type="hidden" name="form_type" value="Film Breakdown Request">
+
+      <div class="form-grid2">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="Name" required>
+        </div>
+        <div class="form-row">
+          <label for="player-team">Team / Position (optional)</label>
+          <input type="text" id="player-team" name="Team or Position">
+        </div>
+      </div>
+
+      <div class="form-grid2">
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="Email" required>
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="Phone" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="package">Breakdown Package</label>
+        <select id="package" name="Package" required>
+          <option value="" disabled selected>Select a package</option>
+          <option value="15 Minute Breakdown - $30">15 Minute Breakdown — $30</option>
+          <option value="30 Minute Breakdown - $60">30 Minute Breakdown — $60</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="film-link">Link to your game film (if you have it ready)</label>
+        <input type="url" id="film-link" name="Film Link" placeholder="YouTube, Hudl, Google Drive, etc.">
+      </div>
+
+      <div class="form-row">
+        <label for="message">What should the coach focus on?</label>
+        <textarea id="message" name="Message" placeholder="Position, specific plays, what you want feedback on..."></textarea>
+      </div>
+
+      <div class="form-submit-row">
+        <button type="submit" class="btn btn-primary">REQUEST BREAKDOWN</button>
+      </div>
+      <p class="form-note">This is a request, not a payment — we'll follow up by email or phone to confirm your film, schedule, and payment details.</p>
+      <p class="form-error" id="form-error">Something went wrong sending that — please try again, or email us directly.</p>
+    </form>
+
+    <div class="confirm-panel" id="confirm-panel">
+      <div class="eyebrow">REQUEST RECEIVED</div>
+      <h3>Thanks — we've got your request.</h3>
+      <p>A coach will follow up by email or phone shortly to collect your film and confirm scheduling and payment.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">MP<span>X</span></a>
+      <p>A lacrosse brand built on inclusion and the growth of the game — training, gear, and community, one initiative at a time.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="training.html">Training</a>
+        <a href="about.html">About</a>
+        <a href="training.html#careers">Careers</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://instagram.com/mpxtraining" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://tiktok.com/@mpxtraining" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom wrap">© 2026 MPX. All rights reserved.</div>
+</footer>
+
+<script>
+  const form = document.getElementById('breakdown-form');
+  const errorEl = document.getElementById('form-error');
+  const confirmPanel = document.getElementById('confirm-panel');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    errorEl.style.display = 'none';
+    const submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'SENDING...';
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        form.style.display = 'none';
+        confirmPanel.style.display = 'block';
+        confirmPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        throw new Error('Form submission failed');
+      }
+    }).catch(function () {
+      errorEl.style.display = 'block';
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'REQUEST BREAKDOWN';
+    });
+  });
+</script>
+
+</body>
+</html>
