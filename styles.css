@@ -206,7 +206,8 @@ section.block{
   align-items:flex-start;
   padding:20px;
 }
-.product-thumb img{
+.product-thumb img,
+.product-thumb video{
   position:absolute;
   top:0;left:0;
   width:100%;
