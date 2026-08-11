@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Guide: 3 Wall Ball Drills — MPX</title>
+<meta name="description" content="Get MPX's free 3 Wall Ball Drills guide — quick, coach-led drills to build cleaner hands and faster stick work.">
+<link rel="icon" href="/logo.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-nav">
+<div class="nav-inner">
+<a href="index.html" class="logo">MP<span>X</span></a>
+<nav class="nav-links">
+<a href="index.html">HOME</a>
+<a href="shop.html">SHOP</a>
+<a href="training.html">TRAINING</a>
+<a href="about.html">ABOUT</a>
+</nav>
+</div>
+</header>
+
+<section class="hero" style="padding:90px 32px 60px;">
+<div class="hero-content">
+<div class="eyebrow">FREE GUIDE</div>
+<h1 style="font-size:42px;">3 Wall Ball Drills to Build Cleaner Hands.</h1>
+<p class="hero-body">Enter your email and we'll send the free PDF guide straight to your download — three coach-led drills you can start today with just a stick, a ball, and a wall.</p>
+</div>
+</section>
+
+<section class="block" style="border-top:none;padding-top:0;">
+<div class="wrap">
+
+<form id="drills-form" class="form-card" action="https://formspree.io/f/info@trainmpx.com" method="POST">
+<input type="hidden" name="_subject" value="MPX Free Wall Ball Drills Guide Request">
+<input type="hidden" name="form_type" value="Free Guide Lead">
+
+<div class="form-grid2">
+<div class="form-row">
+<label for="name">Name</label>
+<input type="text" id="name" name="Name" required>
+</div>
+<div class="form-row">
+<label for="email">Email</label>
+<input type="email" id="email" name="Email" required>
+</div>
+</div>
+
+<div class="form-submit-row">
+<button type="submit" class="btn btn-primary">GET THE FREE GUIDE</button>
+</div>
+<p class="form-note">We'll only use this to send your guide and the occasional training tip — unsubscribe anytime.</p>
+<p class="form-error" id="form-error">Something went wrong sending that — please try again, or email us directly.</p>
+</form>
+
+<div class="confirm-panel" id="confirm-panel">
+<div class="eyebrow">YOU'RE IN</div>
+<h3>Here's your guide.</h3>
+<p>Click below to download your free PDF — 3 Wall Ball Drills to Build Cleaner Hands.</p>
+<a href="MPX_3_Wall_Ball_Drills.pdf" download class="btn btn-primary" style="display:inline-block;margin-bottom:22px;">DOWNLOAD PDF</a>
+<div class="confirm-address">
+<div class="loc-name">Want more reps?</div>
+<div class="loc-addr">The full <a href="shop.html">MPX Wall Ball Training</a> program has numbered daily reps and drills to keep progressing — or <a href="book-breakdown.html">request a film breakdown</a> for direct coach feedback on your game.</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<a href="index.html" class="logo">MP<span>X</span></a>
+<p>A lacrosse brand built on inclusion and the growth of the game — training, gear, and community, one initiative at a time.</p>
+</div>
+<div class="footer-cols">
+<div class="footer-col">
+<h4>Site</h4>
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+<a href="training.html">Training</a>
+<a href="about.html">About</a>
+<a href="training.html#careers">Careers</a>
+</div>
+<div class="footer-col">
+<h4>Connect</h4>
+<a href="https://instagram.com/mpxlacrossetraining" target="_blank" rel="noopener">Instagram</a>
+<a href="https://tiktok.com/@mpxlacrossetraining" target="_blank" rel="noopener">TikTok</a>
+<a href="https://www.youtube.com/@MPXTraining" target="_blank" rel="noopener">YouTube</a>
+<a href="https://www.facebook.com/profile.php?id=61592862927500" target="_blank" rel="noopener">Facebook</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom wrap">© 2026 MPX. All rights reserved.</div>
+</footer>
+
+<script>
+const form = document.getElementById('drills-form');
+const errorEl = document.getElementById('form-error');
+const confirmPanel = document.getElementById('confirm-panel');
+
+form.addEventListener('submit', function (e) {
+e.preventDefault();
+errorEl.style.display = 'none';
+const submitBtn = form.querySelector('button[type="submit"]');
+submitBtn.disabled = true;
+submitBtn.textContent = 'SENDING...';
+
+fetch(form.action, {
+method: 'POST',
+body: new FormData(form),
+headers: { 'Accept': 'application/json' }
+}).then(function (response) {
+if (response.ok) {
+form.style.display = 'none';
+confirmPanel.style.display = 'block';
+confirmPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+} else {
+throw new Error('Form submission failed');
+}
+}).catch(function () {
+errorEl.style.display = 'block';
+submitBtn.disabled = false;
+submitBtn.textContent = 'GET THE FREE GUIDE';
+});
+});
+</script>
+
+</body>
+</html>
